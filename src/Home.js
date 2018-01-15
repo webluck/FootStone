@@ -23,7 +23,6 @@ class Home extends React.Component {
 
         return ( 
             <div>            
-                <Button>Normal Button</Button>
                 <Button primary>Primary Button</Button> 
             </div>
         )
