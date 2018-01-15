@@ -5,7 +5,7 @@ class Button extends React.Component{
     render(){
         return (
             <div>
-                Hello World!I'm Comming!
+                Hello World!
             </div>
         )
     }
