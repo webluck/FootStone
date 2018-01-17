@@ -8,11 +8,11 @@ class Home extends React.Component {
 
     render() {
         const Button = styled.div `
+            font-size:16px;
+            margin:0 auto;
             border:1px solid gray;
-            width:180px;
-            height:30px;
-            line-height:30px;
-            padding:5px;
+            max-width:600px;
+            padding:10px;
             text-align:center;
             background-color:#0E83CD;
             color:white;
