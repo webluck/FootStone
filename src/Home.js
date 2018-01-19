@@ -4,49 +4,53 @@ import styled, {
     css
 } from 'styled-components';
 
+import Button1 from './com/button/Button1'
+
 class Home extends React.Component {
 
     render() {
-        const Button = styled.div `
-            font-size:16px;
-            margin:0 auto;
-            border:1px solid gray;
-            max-width:600px;
-            padding:10px;
-            text-align:center;
-            background-color:#0E83CD;
-            color:white;
-            position: relative;
+            const Button = styled.div `
+            color: #fff;
+            background-image: linear-gradient(-180deg, #34d058 0%, #28a745 90%);
+            padding: 30px 100px;
+            font-size: 12px;
+            display: inline-block;
+            cursor: pointer;
+
+            user-select: none;
+            background-repeat: repeat-x;
+            background-position: -1px -1px;
+            background-size: 110% 110%;
+            border: 1px solid rgba(27,31,35,0.2);
+            border-radius: 0.25em;
+
             :hover{
-                background-color:white;
-                cursor:pointer;
-                color:#0E83CD;
+                background-color: #269f42;
+                background-image: linear-gradient(-180deg, #2fcb53 0%, #269f42 90%);
+                background-position: 0 -0.5em;
+                border-color: rgba(27, 31, 35, 0.5)
             }
+
             :active{
-                top:2px;
-            }
-            :before{
-                content:"hello-";
-            }
-            :after{
-                content:"-world";
+                background-color: #279f43;
+                background-image: none;
+                border-color: rgba(27, 31, 35, 0.5);
+                box-shadow: inset 0 0.15em 0.3em rgba(27, 31, 35, 0.15)
             }
 
-            transition:background-color 0.3s ease-in;
-            transition:color 0.3s linear;
-
-            -webkit-touch-callout: none; /* iOS Safari */
-            -webkit-user-select: none; /* Chrome/Safari/Opera */
-            -khtml-user-select: none; /* Konqueror */
-            -moz-user-select: none; /* Firefox */
-            -ms-user-select: none; /* Internet Explorer/Edge */
-            user-select: none; /* Non-prefixed version, currently not supported by any browser */
+            // :disabled{
+            //     color: rgba(255, 255, 255, 0.75);
+            //     background-color: #94d3a2;
+            //     background-image: none;
+            //     border-color: rgba(27, 31, 35, 0.2);
+            //     box-shadow: none
+            // }
         `;
 
-        return ( 
-            <div>            
-                <Button>CssBtn</Button> 
-            </div>
+        return(
+        <div>
+            <Button>CssBtn</Button>
+        </div>
         )
     }
 }
