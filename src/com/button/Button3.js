@@ -16,7 +16,7 @@ export default class Button3 extends React.Component {
         `;
 
         const Div1 = styled.div`
-                width: 170px;
+                width: 180px;
                 height: 100px;
                 border-radius: 50px;
                 position: relative;
@@ -30,7 +30,6 @@ export default class Button3 extends React.Component {
             ${props => !opend && css`
                 background-color: rgba(255,255,255,0.4);
                 border:1px solid rgba(0,0,0,0.15);
-                border-left: transparent;
             `}
         `;
 
@@ -45,8 +44,8 @@ export default class Button3 extends React.Component {
             transition:all 0.36s cubic-bezier(0.78, 0.14, 0.15, 0.86);
 
             ${props => opend && css`
-                top: 2px;
-                left: 73px;
+                top: 1px;
+                left: 83px;
             `}
 
             ${props => !opend && css`
@@ -67,7 +66,7 @@ export default class Button3 extends React.Component {
         const opend = nextProp.opend;
         if(opend){
             this.div1.style.backgroundColor="rgba(0,184,0,0.8)";
-            this.div2.style.left="73px";
+            this.div2.style.left="83px";
         }else{
             this.div1.style.backgroundColor="rgba(255,255,255,0.4)";
             this.div1.style.border="1px solid rgba(0,0,0,0.15)";

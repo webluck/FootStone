@@ -24,12 +24,12 @@ export default class Home extends React.Component {
             :active{
                 top:2px;
             }
-            :before{
-                content:"hello-";
-            }
-            :after{
-                content:"-world";
-            }
+            // :before{
+            //     content:"hello-";
+            // }
+            // :after{
+            //     content:"-world";
+            // }
 
             transition:background-color 0.3s ease-in;
             transition:color 0.3s linear;
@@ -44,7 +44,7 @@ export default class Home extends React.Component {
 
         return ( 
             <div>            
-                <Button>CssBtn</Button> 
+                <Button>{this.props.children}</Button> 
             </div>
         )
     }

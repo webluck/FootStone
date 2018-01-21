@@ -11,7 +11,7 @@ import Button3 from './com/button/Button3';
 class Home extends React.Component {
     constructor(props){
         super(props);
-        this.state={opend : false};
+        this.state={opend : true};
     }
 
     render() {
@@ -19,7 +19,7 @@ class Home extends React.Component {
             <div>
                 <section>
                     <h1>Button1</h1>
-                    <div><Button1></Button1></div>
+                    <div><Button1>Save</Button1></div>
                 </section>
                 <section>
                     <h1>Button2</h1>
