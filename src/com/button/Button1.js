@@ -9,7 +9,6 @@ export default class Home extends React.Component {
     render() {
         const Button = styled.div `
             font-size:16px;
-            margin:0 auto;
             border:1px solid gray;
             max-width:300px;
             padding:10px;
