@@ -4,9 +4,10 @@ import styled, {
     css
 } from 'styled-components';
 
-export default class Button2 extends React.Component {
+export default class Button2 extends React.PureComponent {
 
     render() {
+            // console.log("Button2 rendered");
             const Button = styled.div`
                 padding: 30px 100px;
                 font-size: 12px;

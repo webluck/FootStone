@@ -6,7 +6,26 @@ import styled, {
 
 export default class Button3 extends React.Component {
 
+    shouldComponentUpdate(nextProps,nextState){
+        // console.log("-------------------");
+        // console.log(nextProps);
+        // console.log(nextState);
+        // console.log("-------------------");
+        const opend = nextProps.opend;
+        if(opend){
+            this.div1.style.backgroundColor="rgba(0,184,0,0.8)";
+            this.div2.style.left="83px";
+        }else{
+            this.div1.style.backgroundColor="rgba(255,255,255,0.4)";
+            this.div1.style.border="1px solid rgba(0,0,0,0.15)";
+            this.div1.style.borderLeft="transparent";
+            this.div2.style.left="2px";
+        }
+        return false;
+    }
+
     render() {
+        // console.log("Button3 rendered");
         const opend = this.props.opend;
         const Div = styled.div`
             display:inline-block;
@@ -60,19 +79,5 @@ export default class Button3 extends React.Component {
                 <Div1 innerRef={x=>this.div1 = x} opend={this.props.opend}><Div2 innerRef={x=>this.div2 = x} opend={this.props.opend}></Div2></Div1>
             </Div>
         )
-    }
-
-    shouldComponentUpdate(nextProp){
-        const opend = nextProp.opend;
-        if(opend){
-            this.div1.style.backgroundColor="rgba(0,184,0,0.8)";
-            this.div2.style.left="83px";
-        }else{
-            this.div1.style.backgroundColor="rgba(255,255,255,0.4)";
-            this.div1.style.border="1px solid rgba(0,0,0,0.15)";
-            this.div1.style.borderLeft="transparent";
-            this.div2.style.left="2px";
-        }
-        return false;
     }
 }
