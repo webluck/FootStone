@@ -1,29 +1,38 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
 
-function App() {
-  let a = 10;
-  let b = 10;
-  let c = a + b;
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-           Hello react-scripts {c}
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import Button1 from './componets/form/button/Button1';
+import Button2 from './componets/form/button/Button2';
+import Button3 from './componets/form/button/Button3';
+
+class App extends React.Component {
+    constructor(props){
+        super(props);
+        this.state={opend : true};
+    }
+
+    render() {
+        // console.log("Home rendered");
+        return(
+            <div>
+                <section>
+                    <h1>Button1</h1>
+                    <div><Button1>Save</Button1></div>
+                </section>
+                <section>
+                    <h1>Button2</h1>
+                    <div><Button2>Commit</Button2></div>
+                </section>
+                <section>
+                    <h1>Button3</h1>
+                    <div><Button3 opend={this.state.opend} onClick={()=>{this.turnChange()}}></Button3></div>
+                </section>
+            </div>
+        )
+    }
+
+    turnChange(){
+        this.setState({opend:!this.state.opend});
+    }
 }
 
 export default App;
